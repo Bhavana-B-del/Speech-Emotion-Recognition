@@ -1,4 +1,4 @@
-# VibeCheck.ai — Multilingual Speech Emotion Recognition
+# VibeCheck.ai - Multilingual Speech Emotion Recognition
 
 A speech emotion recognition system that classifies 6 emotions (angry, disgust, fear, happy, neutral, sad) from short voice clips, fine-tuned to generalize across multiple languages and deployed as an interactive Streamlit app.
 
@@ -48,11 +48,11 @@ Full fine-tuning of a wav2vec2-scale model was unnecessary for this task and ris
 - Accuracy: **64.9%**
 - Macro F1: **0.619**
 
-Per-class accuracy varied notably — `neutral` (0.83) and `angry` (0.78) were the strongest classes, while `happy` (0.28) was the weakest, frequently confused with `angry` and `fear` (see confusion matrix in `training.ipynb`).
+Per-class accuracy varied notably - `neutral` (0.83) and `angry` (0.78) were the strongest classes, while `happy` (0.28) was the weakest, frequently confused with `angry` and `fear` (see confusion matrix in `training.ipynb`).
 
-**Zero-shot generalization — German (EMODB, unseen during training):**
+**Zero-shot generalization - German (EMODB, unseen during training):**
 - Accuracy: **65.8%**
-- The model generalized surprisingly well to a language it never saw, particularly on `angry` (97.6% recall) and `sad` (79%), though `disgust` and `fear` recall dropped sharply — likely due to class imbalance in training data and cross-lingual differences in how these emotions are vocally expressed.
+- The model generalized surprisingly well to a language it never saw, particularly on `angry` (97.6% recall) and `sad` (79%), though `disgust` and `fear` recall dropped sharply - likely due to class imbalance in training data and cross-lingual differences in how these emotions are vocally expressed.
 
 Full classification reports and confusion matrices are in `training.ipynb`.
 
@@ -60,8 +60,8 @@ Full classification reports and confusion matrices are in `training.ipynb`.
 
 Two Streamlit UI variants were built on top of the same fine-tuned model:
 
-- **`app.py`** (main) — "VibeCheck," a more playful, roast-styled interface. Records or uploads audio, predicts emotion, and returns a lighthearted "roast" alongside the full probability breakdown.
-- **`formal_variant.py`** — an earlier, more clinical UI presentation of the same model, framed explicitly around the cross-lingual evaluation results.
+- **`app.py`** (main) - "VibeCheck," a more playful, roast-styled interface. Records or uploads audio, predicts emotion, and returns a lighthearted "roast" alongside the full probability breakdown.
+- **`formal_variant.py`** - an earlier, more clinical UI presentation of the same model, framed explicitly around the cross-lingual evaluation results.
 
 Both support:
 - Live microphone recording (via `streamlit-mic-recorder`)
@@ -93,7 +93,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-The app loads the LoRA adapter from `./ser_final_model` at startup (cached after first load). Note: `ffmpeg` must be available on your system for audio format conversion — `imageio-ffmpeg` bundles a portable binary automatically.
+The app loads the LoRA adapter from `./ser_final_model` at startup (cached after first load). Note: `ffmpeg` must be available on your system for audio format conversion - `imageio-ffmpeg` bundles a portable binary automatically.
 
 ## Tech Stack
 

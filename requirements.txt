@@ -1,0 +1,11 @@
+streamlit
+torch
+torchaudio
+transformers
+peft
+soundfile
+librosa
+numpy
+streamlit-mic-recorder
+imageio[ffmpeg]
+pydub

@@ -1,0 +1,35 @@
+{
+  "label2id": {
+    "angry": 0,
+    "disgust": 1,
+    "fear": 2,
+    "happy": 3,
+    "neutral": 4,
+    "sad": 5
+  },
+  "id2label": {
+    "0": "angry",
+    "1": "disgust",
+    "2": "fear",
+    "3": "happy",
+    "4": "neutral",
+    "5": "sad"
+  },
+  "max_duration_s": 6,
+  "sampling_rate": 16000,
+  "model_base": "facebook/wav2vec2-base",
+  "strategy": "lora_top12_layers_balanced_multilingual",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "languages_trained_on": [
+    "english",
+    "chinese_accented_english",
+    "persian",
+    "italian",
+    "urdu"
+  ],
+  "zero_shot_test": "german_emodb",
+  "is_peft_model": true,
+  "lr_head": 0.0002,
+  "lr_encoder": 5e-05
+}

@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Training checkpoints (large, not needed — only final adapter is committed)
+ser_checkpoints/
+*.ckpt
+
+# Datasets (never commit raw audio datasets — link to source instead)
+data/
+*.wav
+*.mp3
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs
+*.log
